@@ -1,0 +1,9 @@
+{
+  "extends": [
+    "config:base",
+    ":timezone(Asia/Tokyo)",
+    ":automergePatch",
+    ":semanticCommitsDisabled"
+  ],
+  "labels": ["dependencies"]
+}

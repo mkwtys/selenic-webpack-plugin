@@ -1,0 +1,9 @@
+{
+  "name": "deps",
+  "version": "0.0.0",
+  "author": "a <a@example.com>",
+  "license": "MIT",
+  "dependencies": {
+    "dep": "1.0.0"
+  }
+}

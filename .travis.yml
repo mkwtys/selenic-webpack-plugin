@@ -1,0 +1,10 @@
+dist: trusty
+language: node_js
+node_js:
+  - '6'
+  - '8'
+  - '10'
+  - '11'
+before_script:
+  - npm run bootstrap -- --no-ci
+  - npm run build

@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Plugin fixtures: deps 1`] = `
+"*
+ * @license
+ *
+ * deps:
+ *   version: 0.0.0
+ *   license: MIT
+ *   author: a <a@example.com>
+ *
+ * dep:
+ *   version: 1.0.0
+ *   license: MIT
+ *   author: a <a@example.com>
+ *   contributors: c1 <c1@example.com>, c2 <c2@example.com>
+ *
+ "
+`;
+
+exports[`Plugin fixtures: minimal 1`] = `
+"*
+ * @license
+ *
+ * a:
+ *   version: 0.0.0
+ *   license: MIT
+ *   author: a <a@example.com>
+ *
+ "
+`;
+
+exports[`Plugin fixtures: private 1`] = `""`;
