@@ -119,3 +119,7 @@ optimization: {
 }
 ...
 ```
+
+## License
+
+MIT © [mkwtys](https://github.com/mkwtys)
