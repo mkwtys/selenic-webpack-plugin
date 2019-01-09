@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/mkwtys/selenic-webpack-plugin.svg?branch=master)](https://travis-ci.com/mkwtys/selenic-webpack-plugin)
+
 # @selenic/webpack-plugin
 
 `@selenic/webpack-plugin` is add license header to your bundle as follows.
@@ -101,7 +103,7 @@ npm install --save-dev @selenic/webpack-plugin
 
 ## Usage
 
-To use @selenic/webpack-plugin, you need to set the `optimize.minimize` option to `false`. If you want to minify, use the minify plugin.
+To use `@selenic/webpack-plugin`, you need to set the `optimize.minimize` option to `false`. If you want to minify, use the minify plugin.
 
 webpack.config.js:
 
@@ -111,7 +113,7 @@ import TerserWebpackPlugin from 'terser-webpack-plugin'
 
 ...
 plugins: [
-  new TerserWebpackPlugin(options),
+  new TerserWebpackPlugin(options),
   new SelenicWebpackPlugin()
 ],
 optimization: {
