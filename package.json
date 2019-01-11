@@ -19,6 +19,7 @@
     "build": "npm run type-check && npm run build:js && npm run build:types",
     "build:js": "babel src/ -d lib/ --extensions \".ts,.js\" --ignore \"**/__tests__/**/**\"",
     "build:types": "tsc --emitDeclarationOnly",
+    "coverage": "jest --coverage",
     "test": "jest",
     "test:update": "jest -u",
     "type-check": "tsc --noEmit"
