@@ -6,4 +6,8 @@ node_js:
   - '10'
   - '11'
 before_script:
+  - npm i codecov
   - npm run build
+after_success:
+  - npm run coverage
+  - codecov
