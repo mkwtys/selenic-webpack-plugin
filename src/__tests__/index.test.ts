@@ -4,8 +4,7 @@ import MemoryFS from 'memory-fs'
 import path from 'path'
 import TerserWebpackPlugin from 'terser-webpack-plugin'
 import webpack from 'webpack'
-
-const Plugin = require('../')
+import Plugin from '../'
 
 describe('Plugin', () => {
   it('need apply method', () => {
