@@ -30,6 +30,7 @@
     "@types/jest": "23.3.12",
     "@types/memory-fs": "0.3.2",
     "@types/pkg-up": "2.0.0",
+    "@types/terser-webpack-plugin": "1.2.0",
     "@types/webpack": "4.4.23",
     "@types/webpack-sources": "0.1.5",
     "extract-comments": "1.1.0",
