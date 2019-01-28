@@ -44,6 +44,11 @@ exports[`Plugin fixtures: multi-versions 1`] = `
  *   license: MIT
  *   author: a <a@example.com>
  *
+ * all:
+ *   version: 1.0.0
+ *   license: MIT
+ *   author: all <all@example.com>
+ *
  * b:
  *   version: 1.0.0
  *   license: MIT

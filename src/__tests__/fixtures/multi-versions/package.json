@@ -4,6 +4,7 @@
   "author": "a <a@example.com>",
   "license": "MIT",
   "dependencies": {
+    "all": "1.0.0",
     "a": "1.0.0",
     "b": "1.0.0",
     "c": "1.0.0"

@@ -20,13 +20,13 @@ export default class SelenicWebpackPlugin {
             chunk.modulesIterable.forEach(mod => {
               if (mod.resource !== mainResource) {
                 const pkg = readPkgUp(mod.resource)
-                const dep = deps[pkg.name]
-                deps[pkg.name] = dep
-                  ? Array.isArray(dep)
-                    ? [...dep, pkg]
-                    : [dep, pkg]
-                  : pkg
+                const map = deps[pkg.name] ? deps[pkg.name] : new Map()
+                map.set(pkg.version, pkg)
+                deps[pkg.name] = map
               }
+            })
+            Object.entries(deps).forEach(entry => {
+              deps[entry[0]] = [...entry[1].values()]
             })
             chunk.files.forEach(filename => {
               compilation.assets[filename] = new ConcatSource(
