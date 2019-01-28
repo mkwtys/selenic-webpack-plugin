@@ -1,4 +1,6 @@
 [![Build Status](https://travis-ci.com/mkwtys/selenic-webpack-plugin.svg?branch=master)](https://travis-ci.com/mkwtys/selenic-webpack-plugin)
+[![codecov](https://codecov.io/gh/mkwtys/selenic-webpack-plugin/branch/master/graph/badge.svg)](https://codecov.io/gh/mkwtys/selenic-webpack-plugin)
+[![npm version](https://badge.fury.io/js/%40selenic%2Fwebpack-plugin.svg)](https://badge.fury.io/js/%40selenic%2Fwebpack-plugin)
 
 # @selenic/webpack-plugin
 
