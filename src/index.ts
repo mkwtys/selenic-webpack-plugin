@@ -17,14 +17,17 @@ export default class SelenicWebpackPlugin {
           chunks.forEach(chunk => {
             const mainResource = chunk.entryModule.resource
             const deps: { [key: string]: any } = {}
-            const depsMap = new Map()
             chunk.modulesIterable.forEach(mod => {
               if (mod.resource !== mainResource) {
                 const pkg = readPkgUp(mod.resource)
-                depsMap.set(`${pkg.name}@${pkg.version}`, pkg)
+                const dep = deps[pkg.name]
+                deps[pkg.name] = dep
+                  ? Array.isArray(dep)
+                    ? [...dep, pkg]
+                    : [dep, pkg]
+                  : pkg
               }
             })
-            depsMap.forEach((v, k) => (deps[k] = v))
             chunk.files.forEach(filename => {
               compilation.assets[filename] = new ConcatSource(
                 createLicenseHeader({

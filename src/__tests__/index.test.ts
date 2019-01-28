@@ -58,4 +58,5 @@ describe('Plugin', () => {
   fixtureTest('minimal')
   fixtureTest('private')
   fixtureTest('deps')
+  fixtureTest('multi-versions')
 })

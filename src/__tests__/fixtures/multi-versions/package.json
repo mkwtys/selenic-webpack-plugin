@@ -1,0 +1,11 @@
+{
+  "name": "multi-versions",
+  "version": "0.0.0",
+  "author": "a <a@example.com>",
+  "license": "MIT",
+  "dependencies": {
+    "a": "1.0.0",
+    "b": "1.0.0",
+    "c": "1.0.0"
+  }
+}
