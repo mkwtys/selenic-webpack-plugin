@@ -30,4 +30,40 @@ exports[`Plugin fixtures: minimal 1`] = `
  "
 `;
 
+exports[`Plugin fixtures: multi-versions 1`] = `
+"*
+ * @license
+ *
+ * multi-versions:
+ *   version: 0.0.0
+ *   license: MIT
+ *   author: a <a@example.com>
+ *
+ * a:
+ *   version: 1.0.0
+ *   license: MIT
+ *   author: a <a@example.com>
+ *
+ * b:
+ *   version: 1.0.0
+ *   license: MIT
+ *   author: b <b@example.com>
+ *
+ * c:
+ *   version: 1.0.0
+ *   license: MIT
+ *   author: c <c@example.com>
+ *
+ * d:
+ *   version: 1.0.0, 2.0.0
+ *   license: MIT
+ *   author: d <d@example.com>
+ *
+ *   version: 3.0.0
+ *   license: ISC
+ *   author: d <d@example.com>
+ *
+ "
+`;
+
 exports[`Plugin fixtures: private 1`] = `""`;
