@@ -41,7 +41,7 @@
     "memory-fs": "0.4.1",
     "terser-webpack-plugin": "1.2.2",
     "typescript": "3.3.1",
-    "webpack": "4.29.2"
+    "webpack": "4.29.3"
   },
   "prettier": {
     "pringWidth": 120,
