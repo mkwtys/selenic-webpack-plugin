@@ -15,11 +15,20 @@
   ],
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/mkwtys/selenic-webpack-plugin.git"
+  },
   "scripts": {
     "build": "tsc",
     "coverage": "jest --coverage",
     "test": "jest",
     "test:update": "jest -u"
+  },
+  "prettier": {
+    "pringWidth": 120,
+    "semi": false,
+    "singleQuote": true
   },
   "dependencies": {
     "@selenic/core": "^0.6.0",
@@ -42,11 +51,6 @@
     "terser-webpack-plugin": "1.2.3",
     "typescript": "3.3.3333",
     "webpack": "4.29.6"
-  },
-  "prettier": {
-    "pringWidth": 120,
-    "semi": false,
-    "singleQuote": true
   },
   "publishConfig": {
     "access": "public"
