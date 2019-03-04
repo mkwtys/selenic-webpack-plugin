@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Plugin fixtures: deps 1`] = `
+exports[`Plugin fixtures minimal config: deps 1`] = `
 "*
  * @license
  *
@@ -18,7 +18,7 @@ exports[`Plugin fixtures: deps 1`] = `
  "
 `;
 
-exports[`Plugin fixtures: minimal 1`] = `
+exports[`Plugin fixtures minimal config: minimal 1`] = `
 "*
  * @license
  *
@@ -30,7 +30,7 @@ exports[`Plugin fixtures: minimal 1`] = `
  "
 `;
 
-exports[`Plugin fixtures: multi-versions 1`] = `
+exports[`Plugin fixtures minimal config: multi-versions 1`] = `
 "*
  * @license
  *
@@ -71,4 +71,42 @@ exports[`Plugin fixtures: multi-versions 1`] = `
  "
 `;
 
-exports[`Plugin fixtures: private 1`] = `""`;
+exports[`Plugin fixtures minimal config: private 1`] = `""`;
+
+exports[`Plugin fixtures splitChunks: deps 1`] = `
+"*
+ * @license
+ *
+ * deps:
+ *   version: 0.0.0
+ *   license: MIT
+ *   author: a <a@example.com>
+ *
+ "
+`;
+
+exports[`Plugin fixtures splitChunks: minimal 1`] = `
+"*
+ * @license
+ *
+ * a:
+ *   version: 0.0.0
+ *   license: MIT
+ *   author: a <a@example.com>
+ *
+ "
+`;
+
+exports[`Plugin fixtures splitChunks: multi-versions 1`] = `
+"*
+ * @license
+ *
+ * multi-versions:
+ *   version: 0.0.0
+ *   license: MIT
+ *   author: a <a@example.com>
+ *
+ "
+`;
+
+exports[`Plugin fixtures splitChunks: private 1`] = `""`;

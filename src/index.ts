@@ -16,7 +16,7 @@ export default class SelenicWebpackPlugin {
         '@selenic/webpack-plugin',
         (chunks, callback) => {
           chunks.forEach(chunk => {
-            const mainResource = chunk.entryModule.resource
+            const mainResource = chunk.entryModule && chunk.entryModule.resource
             const deps: { [key: string]: any } = {}
             chunk.modulesIterable.forEach(mod => {
               if (mod.resource !== mainResource) {
