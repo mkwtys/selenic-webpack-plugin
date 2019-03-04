@@ -11,10 +11,10 @@ describe('Plugin', () => {
     assert(typeof new Plugin().apply === 'function')
   })
 
-  function fixtureTest(fixtureName: string) {
-    it(`fixtures: ${fixtureName}`, done => {
-      const compiler = webpack({
-        mode: 'production',
+  describe('fixtures', () => {
+    function fixtureTest(fixtureName: string) {
+      const webpackConfig = {
+        mode: 'production' as 'production',
         entry: {
           index: path.resolve(__dirname, `fixtures/${fixtureName}/src`)
         },
@@ -41,22 +41,54 @@ describe('Plugin', () => {
         optimization: {
           minimize: false
         }
-      })
-      compiler.outputFileSystem = new MemoryFS()
-      compiler.run((err, stats) => {
-        const compiled = stats.compilation.assets['index.js']
-          ? stats.compilation.assets['index.js'].source()
-          : ''
-        const comments = extractComments(compiled)
-        const licenseHeader = comments.length ? `${comments[0].raw}` : ''
-        expect(licenseHeader).toMatchSnapshot()
-        done()
-      })
-    })
-  }
+      }
 
-  fixtureTest('minimal')
-  fixtureTest('private')
-  fixtureTest('deps')
-  fixtureTest('multi-versions')
+      it(`minimal config: ${fixtureName}`, done => {
+        const compiler = webpack(webpackConfig)
+        compiler.outputFileSystem = new MemoryFS()
+        compiler.run((err, stats) => {
+          const compiled = stats.compilation.assets['index.js']
+            ? stats.compilation.assets['index.js'].source()
+            : ''
+          const comments = extractComments(compiled)
+          const licenseHeader = comments.length ? `${comments[0].raw}` : ''
+          expect(licenseHeader).toMatchSnapshot()
+          done()
+        })
+      })
+
+      it(`splitChunks: ${fixtureName}`, done => {
+        const compiler = webpack({
+          ...webpackConfig,
+          optimization: {
+            ...webpackConfig.optimization,
+            splitChunks: {
+              cacheGroups: {
+                lib: {
+                  test: /node_modules/,
+                  name: 'lib',
+                  chunks: 'initial',
+                  enforce: true
+                }
+              }
+            }
+          }
+        })
+        compiler.outputFileSystem = new MemoryFS()
+        compiler.run((err, stats) => {
+          const compiled = stats.compilation.assets['index.js']
+            ? stats.compilation.assets['index.js'].source()
+            : ''
+          const comments = extractComments(compiled)
+          const licenseHeader = comments.length ? `${comments[0].raw}` : ''
+          expect(licenseHeader).toMatchSnapshot()
+          done()
+        })
+      })
+    }
+    fixtureTest('minimal')
+    fixtureTest('private')
+    fixtureTest('deps')
+    fixtureTest('multi-versions')
+  })
 })
