@@ -54,5 +54,16 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "changelog": {
+    "repo": "mkwtys/selenic-webpack-plugin",
+    "cacheDir": ".changelog",
+    "labels": {
+      "breaking": ":boom: Breaking Change",
+      "enhancement": ":rocket: Enhancement",
+      "bug": ":bug: Bug Fix",
+      "documentation": ":memo: Documentation",
+      "dependencies": ":arrow_up: Dependencies"
+    }
   }
 }
