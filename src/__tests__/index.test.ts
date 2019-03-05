@@ -4,11 +4,11 @@ import MemoryFS from 'memory-fs'
 import path from 'path'
 import TerserWebpackPlugin from 'terser-webpack-plugin'
 import webpack from 'webpack'
-import Plugin from '../'
+import { SelenicWebpackPlugin } from '../'
 
 describe('Plugin', () => {
   it('need apply method', () => {
-    assert(typeof new Plugin().apply === 'function')
+    assert(typeof new SelenicWebpackPlugin().apply === 'function')
   })
 
   describe('fixtures', () => {
@@ -36,7 +36,7 @@ describe('Plugin', () => {
               sourceMap: false
             }
           }),
-          new Plugin()
+          new SelenicWebpackPlugin()
         ],
         optimization: {
           minimize: false
