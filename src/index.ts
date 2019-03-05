@@ -9,7 +9,7 @@ function readPkgUp(path: string) {
   return JSON.parse(fs.readFileSync(pkgUp.sync(path), 'utf8'))
 }
 
-export default class SelenicWebpackPlugin {
+export class SelenicWebpackPlugin {
   apply(compiler: webpack.Compiler) {
     compiler.hooks.compilation.tap('@selenic/webpack-plugin', compilation => {
       compilation.hooks.optimizeChunkAssets.tapAsync(

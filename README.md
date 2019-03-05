@@ -110,7 +110,7 @@ To use `@selenic/webpack-plugin`, you need to set the `optimize.minimize` option
 webpack.config.js:
 
 ```js
-import SelenicWebpackPlugin from '@selenic/webpack-plugin'
+import { SelenicWebpackPlugin } from '@selenic/webpack-plugin'
 import TerserWebpackPlugin from 'terser-webpack-plugin'
 
 ...
