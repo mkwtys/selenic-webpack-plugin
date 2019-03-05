@@ -1,5 +1,4 @@
 import assert from 'assert'
-import extractComments from 'extract-comments'
 import MemoryFS from 'memory-fs'
 import path from 'path'
 import TerserWebpackPlugin from 'terser-webpack-plugin'
@@ -43,22 +42,32 @@ describe('Plugin', () => {
         }
       }
 
-      it(`minimal config: ${fixtureName}`, done => {
-        const compiler = webpack(webpackConfig)
-        compiler.outputFileSystem = new MemoryFS()
-        compiler.run((err, stats) => {
-          const compiled = stats.compilation.assets['index.js']
-            ? stats.compilation.assets['index.js'].source()
-            : ''
-          const comments = extractComments(compiled)
-          const licenseHeader = comments.length ? `${comments[0].raw}` : ''
-          expect(licenseHeader).toMatchSnapshot()
-          done()
+      function compile(config) {
+        return new Promise((resolve, reject) => {
+          const compiler = webpack(config)
+          compiler.outputFileSystem = new MemoryFS()
+          compiler.run((err, stats) => {
+            if (err) {
+              reject()
+            }
+
+            const compiled = stats.compilation.assets['index.js']
+              ? stats.compilation.assets['index.js'].source()
+              : ''
+            const comments = compiled.match(/\/\*([\S\s]*?)\*\//gm)
+            const licenseHeader = comments && comments[0] ? comments[0] : ''
+            resolve(licenseHeader)
+          })
         })
+      }
+
+      it(`minimal config: ${fixtureName}`, async () => {
+        const licenseHeader = await compile(webpackConfig)
+        expect(licenseHeader).toMatchSnapshot()
       })
 
-      it(`splitChunks: ${fixtureName}`, done => {
-        const compiler = webpack({
+      it(`splitChunks: ${fixtureName}`, async () => {
+        const licenseHeader = await compile({
           ...webpackConfig,
           optimization: {
             ...webpackConfig.optimization,
@@ -74,16 +83,7 @@ describe('Plugin', () => {
             }
           }
         })
-        compiler.outputFileSystem = new MemoryFS()
-        compiler.run((err, stats) => {
-          const compiled = stats.compilation.assets['index.js']
-            ? stats.compilation.assets['index.js'].source()
-            : ''
-          const comments = extractComments(compiled)
-          const licenseHeader = comments.length ? `${comments[0].raw}` : ''
-          expect(licenseHeader).toMatchSnapshot()
-          done()
-        })
+        expect(licenseHeader).toMatchSnapshot()
       })
     }
     fixtureTest('minimal')
