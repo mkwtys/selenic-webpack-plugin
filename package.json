@@ -62,7 +62,8 @@
       "enhancement": ":rocket: Enhancement",
       "bug": ":bug: Bug Fix",
       "documentation": ":memo: Documentation",
-      "dependencies": ":arrow_up: Dependencies"
+      "dependencies": ":arrow_up: Dependencies",
+      "internal": ":house: Internal"
     }
   }
 }

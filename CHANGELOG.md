@@ -1,5 +1,15 @@
 # Change Log
 
+## v0.4.0 (2019-03-05)
+
+#### :rocket: Enhancement
+
+- [#44](https://github.com/mkwtys/selenic-webpack-plugin/pull/44) default export to named export
+
+#### :house: Internal
+
+- [#45](https://github.com/mkwtys/selenic-webpack-plugin/pull/45) comment regex
+
 ## v0.3.0 (2019-03-04)
 
 #### :rocket: Enhancement
