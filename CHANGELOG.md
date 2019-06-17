@@ -1,5 +1,23 @@
 # Change Log
 
+## v0.5.0 (2019-06-17)
+
+#### :boom: Breaking Change
+
+- [#85](https://github.com/mkwtys/selenic-webpack-plugin/pull/85) drop v6, v11, add v12
+
+#### :arrow_up: Dependencies
+
+- [#90](https://github.com/mkwtys/selenic-webpack-plugin/pull/90) Update dependency webpack to v4.34.0
+- [#87](https://github.com/mkwtys/selenic-webpack-plugin/pull/87) Update dependency typescript to v3.5.1
+- [#84](https://github.com/mkwtys/selenic-webpack-plugin/pull/84) Update dependency terser-webpack-plugin to v1.3.0
+- [#72](https://github.com/mkwtys/selenic-webpack-plugin/pull/72) Update dependency jest to v24.8.0
+- [#53](https://github.com/mkwtys/selenic-webpack-plugin/pull/53) Update dependency @babel/preset-env to v7.4.1
+
+#### :house: Internal
+
+- [#94](https://github.com/mkwtys/selenic-webpack-plugin/pull/94) remove object.entries polyfill
+
 ## v0.4.0 (2019-03-05)
 
 #### :rocket: Enhancement
