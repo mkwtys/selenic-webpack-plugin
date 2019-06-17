@@ -11,47 +11,48 @@
  * @license
  *
  * @selenic/webpack-plugin:
- *   version: 0.2.0
+ *   version: 0.6.0
  *   license: MIT
  *   author: mkwtys <mkwtys@gmail.com>
  *
  * @selenic/core:
- *   version: 0.2.0
+ *   version: 0.7.0
  *   license: MIT
  *   author: mkwtys <mkwtys@gmail.com>
+ *   homepage: https://github.com/mkwtys/selenic
  *
  * find-up:
- *   version: 2.1.0
+ *   version: 3.0.0
  *   license: MIT
  *   author: Sindre Sorhus <sindresorhus@gmail.com>
  *   homepage: https://github.com/sindresorhus/find-up#readme
  *
  * locate-path:
- *   version: 2.0.0
+ *   version: 3.0.0
  *   license: MIT
  *   author: Sindre Sorhus <sindresorhus@gmail.com>
  *   homepage: https://github.com/sindresorhus/locate-path#readme
  *
  * p-limit:
- *   version: 1.3.0
+ *   version: 2.2.0
  *   license: MIT
  *   author: Sindre Sorhus <sindresorhus@gmail.com>
  *   homepage: https://github.com/sindresorhus/p-limit#readme
  *
  * p-locate:
- *   version: 2.0.0
+ *   version: 3.0.0
  *   license: MIT
  *   author: Sindre Sorhus <sindresorhus@gmail.com>
  *   homepage: https://github.com/sindresorhus/p-locate#readme
  *
  * p-try:
- *   version: 1.0.0
+ *   version: 2.2.0
  *   license: MIT
  *   author: Sindre Sorhus <sindresorhus@gmail.com>
  *   homepage: https://github.com/sindresorhus/p-try#readme
  *
  * path-browserify:
- *   version: 0.0.0
+ *   version: 0.0.1
  *   license: MIT
  *   author: James Halliday <mail@substack.net>
  *   homepage: https://github.com/substack/path-browserify
@@ -63,7 +64,7 @@
  *   homepage: https://github.com/sindresorhus/path-exists#readme
  *
  * pkg-up:
- *   version: 2.0.0
+ *   version: 3.1.0
  *   license: MIT
  *   author: Sindre Sorhus <sindresorhus@gmail.com>
  *   homepage: https://github.com/sindresorhus/pkg-up#readme
@@ -73,6 +74,11 @@
  *   license: MIT
  *   author: Roman Shtylman <shtylman@gmail.com>
  *   homepage: https://github.com/shtylman/node-process#readme
+ *
+ * semver:
+ *   version: 6.1.1
+ *   license: ISC
+ *   homepage: https://github.com/npm/node-semver#readme
  *
  * source-list-map:
  *   version: 2.0.1
