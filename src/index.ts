@@ -1,4 +1,3 @@
-import 'core-js/modules/es7.object.entries'
 import { createLicenseHeader } from '@selenic/core'
 import fs from 'fs'
 import pkgUp from 'pkg-up'
