@@ -46,7 +46,7 @@
     "@types/webpack-sources": "0.1.5",
     "jest": "24.8.0",
     "memory-fs": "0.4.1",
-    "terser-webpack-plugin": "1.3.0",
+    "terser-webpack-plugin": "1.4.1",
     "typescript": "3.5.3",
     "webpack": "4.38.0"
   },
