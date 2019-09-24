@@ -49,7 +49,7 @@
     "memory-fs": "0.4.1",
     "terser-webpack-plugin": "2.1.0",
     "typescript": "3.6.3",
-    "webpack": "4.40.2"
+    "webpack": "4.40.3"
   },
   "publishConfig": {
     "access": "public"
