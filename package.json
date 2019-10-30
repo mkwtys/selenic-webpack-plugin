@@ -40,7 +40,7 @@
     "@babel/preset-typescript": "7.6.0",
     "@types/jest": "24.0.21",
     "@types/memory-fs": "0.3.2",
-    "@types/node": "12.12.0",
+    "@types/node": "12.12.1",
     "@types/pkg-up": "3.1.0",
     "@types/terser-webpack-plugin": "1.2.1",
     "@types/webpack": "4.39.5",
