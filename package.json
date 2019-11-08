@@ -31,7 +31,7 @@
     "singleQuote": true
   },
   "dependencies": {
-    "@selenic/core": "^0.7.0",
+    "@selenic/core": "^0.8.0",
     "pkg-up": "^3.1.0",
     "webpack-sources": "^1.3.0"
   },
