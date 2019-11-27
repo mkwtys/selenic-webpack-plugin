@@ -7,6 +7,10 @@
     "plugin",
     "webpack"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/mkwtys/selenic-webpack-plugin.git"
+  },
   "license": "MIT",
   "author": "mkwtys <mkwtys@gmail.com>",
   "files": [
@@ -15,10 +19,6 @@
   ],
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/mkwtys/selenic-webpack-plugin.git"
-  },
   "scripts": {
     "build": "tsc",
     "coverage": "jest --coverage",
