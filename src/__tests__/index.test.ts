@@ -43,7 +43,10 @@ describe('Plugin', () => {
       }
 
       function compile(config) {
-        return new Promise((resolve, reject) => {
+        return new Promise<{
+          licenseHeader?: string
+          chunkLicenseHeader?: string
+        }>((resolve, reject) => {
           const compiler = webpack(config)
           compiler.outputFileSystem = new MemoryFS()
           compiler.run((err, stats) => {
@@ -56,18 +59,25 @@ describe('Plugin', () => {
               : ''
             const comments = compiled.match(/\/\*([\S\s]*?)\*\//gm)
             const licenseHeader = comments && comments[0] ? comments[0] : ''
-            resolve(licenseHeader)
+
+            const chunk = stats.compilation.assets['lib.js']
+              ? stats.compilation.assets['lib.js'].source()
+              : ''
+            const chunkComments = chunk.match(/\/\*([\S\s]*?)\*\//gm)
+            const chunkLicenseHeader =
+              chunkComments && chunkComments[0] ? chunkComments[0] : ''
+            resolve({ licenseHeader, chunkLicenseHeader })
           })
         })
       }
 
       it(`minimal config: ${fixtureName}`, async () => {
-        const licenseHeader = await compile(webpackConfig)
+        const { licenseHeader } = await compile(webpackConfig)
         expect(licenseHeader).toMatchSnapshot()
       })
 
       it(`splitChunks: ${fixtureName}`, async () => {
-        const licenseHeader = await compile({
+        const { licenseHeader, chunkLicenseHeader } = await compile({
           ...webpackConfig,
           optimization: {
             ...webpackConfig.optimization,
@@ -84,6 +94,7 @@ describe('Plugin', () => {
           }
         })
         expect(licenseHeader).toMatchSnapshot()
+        expect(chunkLicenseHeader).toMatchSnapshot()
       })
     }
     fixtureTest('minimal')

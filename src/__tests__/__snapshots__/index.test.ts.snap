@@ -85,6 +85,24 @@ exports[`Plugin fixtures splitChunks: deps 1`] = `
  */"
 `;
 
+exports[`Plugin fixtures splitChunks: deps 2`] = `
+"/**
+ * @license
+ *
+ * @selenic/webpack-plugin:
+ *   version: 0.6.0
+ *   license: MIT
+ *   author: mkwtys <mkwtys@gmail.com>
+ *
+ * dep:
+ *   version: 1.0.0
+ *   license: MIT
+ *   author: a <a@example.com>
+ *   contributors: c1 <c1@example.com>, c2 <c2@example.com>
+ *
+ */"
+`;
+
 exports[`Plugin fixtures splitChunks: minimal 1`] = `
 "/**
  * @license
@@ -96,6 +114,8 @@ exports[`Plugin fixtures splitChunks: minimal 1`] = `
  *
  */"
 `;
+
+exports[`Plugin fixtures splitChunks: minimal 2`] = `""`;
 
 exports[`Plugin fixtures splitChunks: multi-versions 1`] = `
 "/**
@@ -109,4 +129,47 @@ exports[`Plugin fixtures splitChunks: multi-versions 1`] = `
  */"
 `;
 
+exports[`Plugin fixtures splitChunks: multi-versions 2`] = `
+"/**
+ * @license
+ *
+ * @selenic/webpack-plugin:
+ *   version: 0.6.0
+ *   license: MIT
+ *   author: mkwtys <mkwtys@gmail.com>
+ *
+ * a:
+ *   version: 1.0.0
+ *   license: MIT
+ *   author: a <a@example.com>
+ *
+ * all:
+ *   version: 1.0.0
+ *   license: MIT
+ *   author: all <all@example.com>
+ *
+ * b:
+ *   version: 1.0.0
+ *   license: MIT
+ *   author: b <b@example.com>
+ *
+ * c:
+ *   version: 1.0.0
+ *   license: MIT
+ *   author: c <c@example.com>
+ *
+ * d:
+ *   version: 1.0.0, 2.0.0
+ *   license: MIT
+ *   author: d <d@example.com>
+ *
+ *   version: 3.0.0
+ *   license: ISC
+ *   author: d <d@example.com>
+ *
+ */"
+`;
+
 exports[`Plugin fixtures splitChunks: private 1`] = `""`;
+
+exports[`Plugin fixtures splitChunks: private 2`] = `""`;
