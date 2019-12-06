@@ -89,11 +89,6 @@ exports[`Plugin fixtures splitChunks: deps 2`] = `
 "/**
  * @license
  *
- * @selenic/webpack-plugin:
- *   version: 0.6.0
- *   license: MIT
- *   author: mkwtys <mkwtys@gmail.com>
- *
  * dep:
  *   version: 1.0.0
  *   license: MIT
@@ -132,11 +127,6 @@ exports[`Plugin fixtures splitChunks: multi-versions 1`] = `
 exports[`Plugin fixtures splitChunks: multi-versions 2`] = `
 "/**
  * @license
- *
- * @selenic/webpack-plugin:
- *   version: 0.6.0
- *   license: MIT
- *   author: mkwtys <mkwtys@gmail.com>
  *
  * a:
  *   version: 1.0.0
