@@ -34,7 +34,7 @@ export class SelenicWebpackPlugin {
             chunk.files.forEach(filename => {
               compilation.assets[filename] = new ConcatSource(
                 createLicenseHeader({
-                  main: readPkgUp(mainResource),
+                  main: mainResource && readPkgUp(mainResource),
                   deps
                 }),
                 compilation.assets[filename]
