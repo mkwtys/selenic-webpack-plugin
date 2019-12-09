@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/mkwtys/selenic-webpack-plugin.svg?branch=master)](https://travis-ci.com/mkwtys/selenic-webpack-plugin)
+[![Actions Status](https://github.com/mkwtys/selenic/workflows/Node%20CI/badge.svg)](https://github.com/mkwtys/selenic-webpack-plugin/actions?query=workflow%3A%22Node+CI%22)
 [![codecov](https://codecov.io/gh/mkwtys/selenic-webpack-plugin/branch/master/graph/badge.svg)](https://codecov.io/gh/mkwtys/selenic-webpack-plugin)
 [![npm version](https://badge.fury.io/js/%40selenic%2Fwebpack-plugin.svg)](https://badge.fury.io/js/%40selenic%2Fwebpack-plugin)
 
