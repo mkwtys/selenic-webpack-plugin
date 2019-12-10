@@ -1,0 +1,13 @@
+{
+  "name": "homepage",
+  "version": "1.0.0",
+  "author": "a <a@example.com>",
+  "license": "MIT",
+  "dependencies": {
+    "github": "1.0.0",
+    "github-hash": "1.0.0",
+    "github-hash-readme": "1.0.0",
+    "hash": "1.0.0",
+    "hash-readme": "1.0.0"
+  }
+}
