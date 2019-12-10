@@ -20,14 +20,15 @@ export class SelenicWebpackPlugin {
           chunks.forEach(chunk => {
             const mainResource = chunk.entryModule && chunk.entryModule.resource
             const deps: { [key: string]: any } = {}
-            chunk.modulesIterable.forEach(mod => {
-              if (mod.resource !== mainResource) {
+            chunk
+              .getModules()
+              .filter(mod => mod.resource !== mainResource)
+              .forEach(mod => {
                 const pkg = readPkgUp(mod.resource)
                 const map = deps[pkg.name] ? deps[pkg.name] : new Map()
                 map.set(pkg.version, pkg)
                 deps[pkg.name] = map
-              }
-            })
+              })
             Object.entries(deps).forEach(entry => {
               deps[entry[0]] = [...entry[1].values()]
             })
