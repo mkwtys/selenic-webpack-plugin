@@ -19,24 +19,27 @@ export class SelenicWebpackPlugin {
         chunks => {
           chunks.forEach(chunk => {
             const mainResource = chunk.entryModule && chunk.entryModule.resource
-            const deps: { [key: string]: any } = {}
+            const mainPkg = mainResource && readPkgUp(mainResource)
+            const depsPkg: { [key: string]: any } = {}
             chunk
               .getModules()
               .filter(mod => mod.resource !== mainResource)
               .forEach(mod => {
                 const pkg = readPkgUp(mod.resource)
-                const map = deps[pkg.name] ? deps[pkg.name] : new Map()
+                const map = depsPkg[pkg.name]
+                  ? new Map(depsPkg[pkg.name])
+                  : new Map()
                 map.set(pkg.version, pkg)
-                deps[pkg.name] = map
+                depsPkg[pkg.name] = map
               })
-            Object.entries(deps).forEach(entry => {
-              deps[entry[0]] = [...entry[1].values()]
+            Object.entries(depsPkg).forEach(([depsName, depsMap]) => {
+              depsPkg[depsName] = [...depsMap.values()]
             })
             chunk.files.forEach(filename => {
               compilation.assets[filename] = new ConcatSource(
                 createLicenseHeader({
-                  main: mainResource && readPkgUp(mainResource),
-                  deps
+                  main: mainPkg,
+                  deps: depsPkg
                 }),
                 compilation.assets[filename]
               )
