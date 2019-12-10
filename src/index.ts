@@ -14,9 +14,9 @@ function readPkgUp(path: string) {
 export class SelenicWebpackPlugin {
   apply(compiler: webpack.Compiler) {
     compiler.hooks.compilation.tap('@selenic/webpack-plugin', compilation => {
-      compilation.hooks.optimizeChunkAssets.tapAsync(
+      compilation.hooks.optimizeChunkAssets.tap(
         '@selenic/webpack-plugin',
-        (chunks, callback) => {
+        chunks => {
           chunks.forEach(chunk => {
             const mainResource = chunk.entryModule && chunk.entryModule.resource
             const deps: { [key: string]: any } = {}
@@ -41,7 +41,6 @@ export class SelenicWebpackPlugin {
               )
             })
           })
-          callback()
         }
       )
     })
