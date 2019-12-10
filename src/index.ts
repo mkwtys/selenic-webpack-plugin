@@ -14,34 +14,37 @@ function readPkgUp(path: string) {
 export class SelenicWebpackPlugin {
   apply(compiler: webpack.Compiler) {
     compiler.hooks.compilation.tap('@selenic/webpack-plugin', compilation => {
-      compilation.hooks.optimizeChunkAssets.tapAsync(
+      compilation.hooks.optimizeChunkAssets.tap(
         '@selenic/webpack-plugin',
-        (chunks, callback) => {
+        chunks => {
           chunks.forEach(chunk => {
             const mainResource = chunk.entryModule && chunk.entryModule.resource
-            const deps: { [key: string]: any } = {}
-            chunk.modulesIterable.forEach(mod => {
-              if (mod.resource !== mainResource) {
+            const mainPkg = mainResource && readPkgUp(mainResource)
+            const depsPkg: { [key: string]: any } = {}
+            chunk
+              .getModules()
+              .filter(mod => mod.resource !== mainResource)
+              .forEach(mod => {
                 const pkg = readPkgUp(mod.resource)
-                const map = deps[pkg.name] ? deps[pkg.name] : new Map()
+                const map = depsPkg[pkg.name]
+                  ? new Map(depsPkg[pkg.name])
+                  : new Map()
                 map.set(pkg.version, pkg)
-                deps[pkg.name] = map
-              }
-            })
-            Object.entries(deps).forEach(entry => {
-              deps[entry[0]] = [...entry[1].values()]
+                depsPkg[pkg.name] = map
+              })
+            Object.entries(depsPkg).forEach(([depsName, depsMap]) => {
+              depsPkg[depsName] = [...depsMap.values()]
             })
             chunk.files.forEach(filename => {
               compilation.assets[filename] = new ConcatSource(
                 createLicenseHeader({
-                  main: mainResource && readPkgUp(mainResource),
-                  deps
+                  main: mainPkg,
+                  deps: depsPkg
                 }),
                 compilation.assets[filename]
               )
             })
           })
-          callback()
         }
       )
     })
