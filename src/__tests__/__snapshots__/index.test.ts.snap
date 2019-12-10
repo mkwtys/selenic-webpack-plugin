@@ -18,6 +18,43 @@ exports[`Plugin fixtures minimal config: deps 1`] = `
  */"
 `;
 
+exports[`Plugin fixtures minimal config: homepage 1`] = `
+"/**
+ * @license
+ *
+ * homepage:
+ *   version: 1.0.0
+ *   license: MIT
+ *   author: a <a@example.com>
+ *
+ * github:
+ *   version: 1.0.0
+ *   license: MIT
+ *   homepage: https://github.com/
+ *
+ * github-hash:
+ *   version: 1.0.0
+ *   license: MIT
+ *   homepage: https://github.com/#hash
+ *
+ * github-hash-readme:
+ *   version: 1.0.0
+ *   license: MIT
+ *   homepage: https://github.com/mkwtys/selenic-webpack-plugin
+ *
+ * hash:
+ *   version: 1.0.0
+ *   license: MIT
+ *   homepage: https://example.com/#hash
+ *
+ * hash-readme:
+ *   version: 1.0.0
+ *   license: MIT
+ *   homepage: https://example.com/#readme
+ *
+ */"
+`;
+
 exports[`Plugin fixtures minimal config: minimal 1`] = `
 "/**
  * @license
@@ -94,6 +131,50 @@ exports[`Plugin fixtures splitChunks: deps 2`] = `
  *   license: MIT
  *   author: a <a@example.com>
  *   contributors: c1 <c1@example.com>, c2 <c2@example.com>
+ *
+ */"
+`;
+
+exports[`Plugin fixtures splitChunks: homepage 1`] = `
+"/**
+ * @license
+ *
+ * homepage:
+ *   version: 1.0.0
+ *   license: MIT
+ *   author: a <a@example.com>
+ *
+ */"
+`;
+
+exports[`Plugin fixtures splitChunks: homepage 2`] = `
+"/**
+ * @license
+ *
+ * github:
+ *   version: 1.0.0
+ *   license: MIT
+ *   homepage: https://github.com/
+ *
+ * github-hash:
+ *   version: 1.0.0
+ *   license: MIT
+ *   homepage: https://github.com/#hash
+ *
+ * github-hash-readme:
+ *   version: 1.0.0
+ *   license: MIT
+ *   homepage: https://github.com/mkwtys/selenic-webpack-plugin
+ *
+ * hash:
+ *   version: 1.0.0
+ *   license: MIT
+ *   homepage: https://example.com/#hash
+ *
+ * hash-readme:
+ *   version: 1.0.0
+ *   license: MIT
+ *   homepage: https://example.com/#readme
  *
  */"
 `;

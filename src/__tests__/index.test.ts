@@ -97,9 +97,11 @@ describe('Plugin', () => {
         expect(chunkLicenseHeader).toMatchSnapshot()
       })
     }
-    fixtureTest('minimal')
-    fixtureTest('private')
+
     fixtureTest('deps')
+    fixtureTest('minimal')
     fixtureTest('multi-versions')
+    fixtureTest('private')
+    fixtureTest('homepage')
   })
 })
