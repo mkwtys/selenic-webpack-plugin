@@ -21,11 +21,6 @@
  *   author: mkwtys <mkwtys@gmail.com>
  *   homepage: https://github.com/mkwtys/selenic
  *
- * @selenic/webpack-plugin:
- *   version: 0.6.0
- *   license: MIT
- *   author: mkwtys <mkwtys@gmail.com>
- *
  * base64-js:
  *   version: 1.3.1
  *   license: MIT
