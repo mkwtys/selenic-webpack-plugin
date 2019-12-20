@@ -53,19 +53,12 @@ describe('Plugin', () => {
             if (err) {
               reject()
             }
-
-            const compiled = stats.compilation.assets['index.js']
-              ? stats.compilation.assets['index.js'].source()
-              : ''
+            const compiled = stats.compilation.assets['index.js'] ? stats.compilation.assets['index.js'].source() : ''
             const comments = compiled.match(/\/\*([\S\s]*?)\*\//gm)
             const licenseHeader = comments && comments[0] ? comments[0] : ''
-
-            const chunk = stats.compilation.assets['lib.js']
-              ? stats.compilation.assets['lib.js'].source()
-              : ''
+            const chunk = stats.compilation.assets['lib.js'] ? stats.compilation.assets['lib.js'].source() : ''
             const chunkComments = chunk.match(/\/\*([\S\s]*?)\*\//gm)
-            const chunkLicenseHeader =
-              chunkComments && chunkComments[0] ? chunkComments[0] : ''
+            const chunkLicenseHeader = chunkComments && chunkComments[0] ? chunkComments[0] : ''
             resolve({ licenseHeader, chunkLicenseHeader })
           })
         })
