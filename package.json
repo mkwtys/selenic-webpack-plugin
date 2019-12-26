@@ -38,7 +38,7 @@
   "devDependencies": {
     "@babel/preset-env": "7.7.7",
     "@babel/preset-typescript": "7.7.7",
-    "@types/jest": "24.0.24",
+    "@types/jest": "24.0.25",
     "@types/memory-fs": "0.3.2",
     "@types/node": "12.12.22",
     "@types/pkg-up": "3.1.0",
