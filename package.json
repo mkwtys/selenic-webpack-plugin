@@ -36,7 +36,7 @@
     "webpack-sources": "^1.4.3"
   },
   "devDependencies": {
-    "@babel/preset-env": "7.9.0",
+    "@babel/preset-env": "7.9.5",
     "@babel/preset-typescript": "7.9.0",
     "@types/jest": "25.2.1",
     "@types/memory-fs": "0.3.2",
