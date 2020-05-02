@@ -1,5 +1,33 @@
 # Change Log
 
+## v0.8.0 (2020-05-01)
+
+#### :arrow_up: Dependencies
+
+- [#294](https://github.com/mkwtys/selenic-webpack-plugin/pull/294) Update dependency @selenic/core to ^0.10.0
+- [#289](https://github.com/mkwtys/selenic-webpack-plugin/pull/289) Update dependency jest to v25.5.0
+- [#278](https://github.com/mkwtys/selenic-webpack-plugin/pull/278) Update dependency @types/jest to v25.2.1
+- [#264](https://github.com/mkwtys/selenic-webpack-plugin/pull/264) Update babel monorepo to v7.9.0 (minor)
+- [#263](https://github.com/mkwtys/selenic-webpack-plugin/pull/263) Bump acorn from 6.4.0 to 6.4.1
+- [#256](https://github.com/mkwtys/selenic-webpack-plugin/pull/256) Update dependency typescript to v3.8.2
+
+## v0.7.0 (2019-12-20)
+
+#### :arrow_up: Dependencies
+
+- [#216](https://github.com/mkwtys/selenic-webpack-plugin/pull/216) Update dependency terser-webpack-plugin to v2.3.0
+- [#203](https://github.com/mkwtys/selenic-webpack-plugin/pull/203) Update dependency @selenic/core to ^0.9.0
+- [#181](https://github.com/mkwtys/selenic-webpack-plugin/pull/181) Update dependency typescript to v3.7.2
+- [#180](https://github.com/mkwtys/selenic-webpack-plugin/pull/180) Update babel monorepo (minor)
+- [#179](https://github.com/mkwtys/selenic-webpack-plugin/pull/179) Update dependency @types/terser-webpack-plugin to v2
+- [#172](https://github.com/mkwtys/selenic-webpack-plugin/pull/172) Update dependency @types/node to v12.12.0
+- [#152](https://github.com/mkwtys/selenic-webpack-plugin/pull/152) Update dependency memory-fs to v0.5.0
+- [#143](https://github.com/mkwtys/selenic-webpack-plugin/pull/143) Update dependency webpack to v4.41.0
+- [#129](https://github.com/mkwtys/selenic-webpack-plugin/pull/129) Bump mixin-deep from 1.3.1 to 1.3.2
+- [#125](https://github.com/mkwtys/selenic-webpack-plugin/pull/125) Update dependency @types/webpack to v4.39.1
+- [#121](https://github.com/mkwtys/selenic-webpack-plugin/pull/121) Update dependency jest to v24.9.0
+- [#117](https://github.com/mkwtys/selenic-webpack-plugin/pull/117) Bump lodash from 4.17.11 to 4.17.15
+
 ## v0.6.0 (2019-06-17)
 
 #### :arrow_up: Dependencies

@@ -1,8 +1,8 @@
+# @selenic/webpack-plugin
+
 [![Actions Status](https://github.com/mkwtys/selenic/workflows/Node%20CI/badge.svg)](https://github.com/mkwtys/selenic-webpack-plugin/actions?query=workflow%3A%22Node+CI%22)
 [![codecov](https://codecov.io/gh/mkwtys/selenic-webpack-plugin/branch/master/graph/badge.svg)](https://codecov.io/gh/mkwtys/selenic-webpack-plugin)
 [![npm version](https://badge.fury.io/js/%40selenic%2Fwebpack-plugin.svg)](https://badge.fury.io/js/%40selenic%2Fwebpack-plugin)
-
-# @selenic/webpack-plugin
 
 `@selenic/webpack-plugin` is add license header to your bundle as follows.
 
@@ -11,12 +11,12 @@
  * @license
  *
  * @selenic/webpack-plugin:
- *   version: 0.6.0
+ *   version: 0.8.0
  *   license: MIT
  *   author: mkwtys <mkwtys@gmail.com>
  *
  * @selenic/core:
- *   version: 0.9.0
+ *   version: 0.10.0
  *   license: MIT
  *   author: mkwtys <mkwtys@gmail.com>
  *   homepage: https://github.com/mkwtys/selenic
@@ -28,7 +28,7 @@
  *   homepage: https://github.com/beatgammit/base64-js
  *
  * buffer:
- *   version: 4.9.1
+ *   version: 4.9.2
  *   license: MIT
  *   author: Feross Aboukhadijeh <feross@feross.org>
  *   contributors: Romain Beauxis <toots@rastageeks.org>, James Halliday <mail@substack.net>
@@ -115,7 +115,7 @@
  *   homepage: https://github.com/mike-spainhower/querystring
  *
  * semver:
- *   version: 6.3.0
+ *   version: 7.3.2
  *   license: ISC
  *   homepage: https://github.com/npm/node-semver
  *
@@ -138,7 +138,7 @@
  *   homepage: https://github.com/defunctzombie/node-url
  *
  * webpack:
- *   version: 4.41.2
+ *   version: 4.43.0
  *   license: MIT
  *   author: Tobias Koppers @sokra
  *   homepage: https://github.com/webpack/webpack
