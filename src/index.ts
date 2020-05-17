@@ -16,13 +16,16 @@ export class SelenicWebpackPlugin {
     compiler.hooks.compilation.tap('@selenic/webpack-plugin', compilation => {
       compilation.hooks.optimizeChunkAssets.tap('@selenic/webpack-plugin', chunks => {
         chunks.forEach(chunk => {
-          const mainResource = chunk.entryModule && chunk.entryModule.resource
+          // @ts-ignore chunk.entryModule.resource
+          const mainResource: string = chunk.entryModule && chunk.entryModule.resource
           const mainPkg = mainResource && readPkgUp(mainResource)
           const depsPkg: { [key: string]: any } = {}
           chunk
             .getModules()
+            // @ts-ignore mod.resource
             .filter(mod => mod.resource !== mainResource)
             .forEach(mod => {
+              // @ts-ignore mod.resource
               const pkg = readPkgUp(mod.resource)
               const map = depsPkg[pkg.name] ? new Map(depsPkg[pkg.name]) : new Map()
               map.set(pkg.version, pkg)
