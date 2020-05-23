@@ -1,5 +1,19 @@
 # Change Log
 
+## v0.9.0 (2020-05-23)
+
+#### :arrow_up: Dependencies
+
+- [#309](https://github.com/mkwtys/selenic-webpack-plugin/pull/309) Update dependency @selenic/core to ^0.11.0
+- [#192](https://github.com/mkwtys/selenic-webpack-plugin/pull/192) Update dependency @types/webpack to v4.41.13
+- [#302](https://github.com/mkwtys/selenic-webpack-plugin/pull/302) Update dependency typescript to v3.9.2
+- [#297](https://github.com/mkwtys/selenic-webpack-plugin/pull/297) Update dependency jest to v26
+- [#295](https://github.com/mkwtys/selenic-webpack-plugin/pull/295) Update dependency terser-webpack-plugin to v3
+
+#### :house: Internal
+
+- [#301](https://github.com/mkwtys/selenic-webpack-plugin/pull/301) tsc to babel
+
 ## v0.8.0 (2020-05-01)
 
 #### :arrow_up: Dependencies
