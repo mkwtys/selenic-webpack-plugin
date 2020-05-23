@@ -6,9 +6,7 @@ import { ConcatSource } from 'webpack-sources'
 
 function readPkgUp(path: string) {
   const pkg = pkgUp.sync({ cwd: path })
-  if (pkg) {
-    return JSON.parse(fs.readFileSync(pkg, 'utf8'))
-  }
+  return pkg && JSON.parse(fs.readFileSync(pkg, 'utf8'))
 }
 
 export class SelenicWebpackPlugin {
