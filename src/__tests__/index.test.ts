@@ -15,11 +15,11 @@ describe('Plugin', () => {
       const webpackConfig = {
         mode: 'production' as 'production',
         entry: {
-          index: path.resolve(__dirname, `fixtures/${fixtureName}/src`)
+          index: path.resolve(__dirname, `fixtures/${fixtureName}/src`),
         },
         output: {
           path: path.resolve(__dirname, `fixtures/${fixtureName}/dist`),
-          filename: '[name].js'
+          filename: '[name].js',
         },
         plugins: [
           new TerserWebpackPlugin({
@@ -27,19 +27,19 @@ describe('Plugin', () => {
               compress: {
                 dead_code: true,
                 unused: true,
-                warnings: true
+                warnings: true,
               },
               output: {
-                comments: false
+                comments: false,
               },
-              sourceMap: false
-            }
+              sourceMap: false,
+            },
           }),
-          new SelenicWebpackPlugin()
+          new SelenicWebpackPlugin(),
         ],
         optimization: {
-          minimize: false
-        }
+          minimize: false,
+        },
       }
 
       function compile(config) {
@@ -80,11 +80,11 @@ describe('Plugin', () => {
                   test: /node_modules/,
                   name: 'lib',
                   chunks: 'initial',
-                  enforce: true
-                }
-              }
-            }
-          }
+                  enforce: true,
+                },
+              },
+            },
+          },
         })
         expect(licenseHeader).toMatchSnapshot()
         expect(chunkLicenseHeader).toMatchSnapshot()
