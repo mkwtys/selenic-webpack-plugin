@@ -11,12 +11,12 @@
  * @license
  *
  * @selenic/webpack-plugin:
- *   version: 0.8.0
+ *   version: 0.9.0
  *   license: MIT
  *   author: mkwtys <mkwtys@gmail.com>
  *
  * @selenic/core:
- *   version: 0.10.0
+ *   version: 0.11.0
  *   license: MIT
  *   author: mkwtys <mkwtys@gmail.com>
  *   homepage: https://github.com/mkwtys/selenic
