@@ -65,8 +65,8 @@
     "webpack-sources": "^1.4.3"
   },
   "devDependencies": {
-    "@babel/cli": "7.10.1",
-    "@babel/preset-env": "7.10.2",
+    "@babel/cli": "7.10.3",
+    "@babel/preset-env": "7.10.3",
     "@babel/preset-typescript": "7.10.1",
     "@types/jest": "26.0.0",
     "@types/memory-fs": "0.3.2",
