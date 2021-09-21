@@ -68,7 +68,7 @@
     "@babel/cli": "7.15.7",
     "@babel/preset-env": "7.15.6",
     "@babel/preset-typescript": "7.15.0",
-    "@types/jest": "27.0.1",
+    "@types/jest": "27.0.2",
     "@types/memory-fs": "0.3.3",
     "@types/node": "14.17.17",
     "@types/pkg-up": "3.1.0",
