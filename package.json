@@ -24,9 +24,9 @@
     "build:js": "babel src --out-dir lib --extensions \".ts\" --ignore src/**/__tests__/",
     "build:types": "tsc --emitDeclarationOnly",
     "clean": "rimraf lib/",
-    "coverage": "jest --coverage",
-    "test": "jest",
-    "test:update": "jest -u"
+    "coverage": "NODE_OPTIONS=--openssl-legacy-provider jest --coverage",
+    "test": "NODE_OPTIONS=--openssl-legacy-provider jest",
+    "test:update": "NODE_OPTIONS=--openssl-legacy-provider jest -u"
   },
   "babel": {
     "presets": [
