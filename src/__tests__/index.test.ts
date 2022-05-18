@@ -18,7 +18,6 @@ describe('Plugin', () => {
           index: path.resolve(__dirname, `fixtures/${fixtureName}/src`),
         },
         output: {
-          hashFunction: 'xxhash64',
           path: path.resolve(__dirname, `fixtures/${fixtureName}/dist`),
           filename: '[name].js',
         },
