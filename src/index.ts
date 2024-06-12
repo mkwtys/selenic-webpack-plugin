@@ -1,11 +1,11 @@
 import { createLicenseHeader } from '@selenic/core'
 import fs from 'fs'
-import pkgUp from 'pkg-up'
+import { pkgUpSync } from 'pkg-up'
 import webpack from 'webpack'
 import { ConcatSource } from 'webpack-sources'
 
 function readPkgUp(path: string) {
-  const pkg = pkgUp.sync({ cwd: path })
+  const pkg = pkgUpSync({ cwd: path })
   return pkg && JSON.parse(fs.readFileSync(pkg, 'utf8'))
 }
 

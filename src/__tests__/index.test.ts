@@ -1,3 +1,4 @@
+import { expect, describe, it } from 'vitest'
 import assert from 'assert'
 import MemoryFS from 'memory-fs'
 import path from 'path'

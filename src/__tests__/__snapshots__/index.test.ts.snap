@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Plugin fixtures minimal config: deps 1`] = `
+exports[`Plugin > fixtures > minimal config: deps 1`] = `
 "/**
  * @license
  *
@@ -18,7 +18,7 @@ exports[`Plugin fixtures minimal config: deps 1`] = `
  */"
 `;
 
-exports[`Plugin fixtures minimal config: homepage 1`] = `
+exports[`Plugin > fixtures > minimal config: homepage 1`] = `
 "/**
  * @license
  *
@@ -55,7 +55,7 @@ exports[`Plugin fixtures minimal config: homepage 1`] = `
  */"
 `;
 
-exports[`Plugin fixtures minimal config: minimal 1`] = `
+exports[`Plugin > fixtures > minimal config: minimal 1`] = `
 "/**
  * @license
  *
@@ -67,7 +67,7 @@ exports[`Plugin fixtures minimal config: minimal 1`] = `
  */"
 `;
 
-exports[`Plugin fixtures minimal config: multi-versions 1`] = `
+exports[`Plugin > fixtures > minimal config: multi-versions 1`] = `
 "/**
  * @license
  *
@@ -108,9 +108,9 @@ exports[`Plugin fixtures minimal config: multi-versions 1`] = `
  */"
 `;
 
-exports[`Plugin fixtures minimal config: private 1`] = `""`;
+exports[`Plugin > fixtures > minimal config: private 1`] = `""`;
 
-exports[`Plugin fixtures splitChunks: deps 1`] = `
+exports[`Plugin > fixtures > splitChunks: deps 1`] = `
 "/**
  * @license
  *
@@ -122,7 +122,7 @@ exports[`Plugin fixtures splitChunks: deps 1`] = `
  */"
 `;
 
-exports[`Plugin fixtures splitChunks: deps 2`] = `
+exports[`Plugin > fixtures > splitChunks: deps 2`] = `
 "/**
  * @license
  *
@@ -135,7 +135,7 @@ exports[`Plugin fixtures splitChunks: deps 2`] = `
  */"
 `;
 
-exports[`Plugin fixtures splitChunks: homepage 1`] = `
+exports[`Plugin > fixtures > splitChunks: homepage 1`] = `
 "/**
  * @license
  *
@@ -147,7 +147,7 @@ exports[`Plugin fixtures splitChunks: homepage 1`] = `
  */"
 `;
 
-exports[`Plugin fixtures splitChunks: homepage 2`] = `
+exports[`Plugin > fixtures > splitChunks: homepage 2`] = `
 "/**
  * @license
  *
@@ -179,7 +179,7 @@ exports[`Plugin fixtures splitChunks: homepage 2`] = `
  */"
 `;
 
-exports[`Plugin fixtures splitChunks: minimal 1`] = `
+exports[`Plugin > fixtures > splitChunks: minimal 1`] = `
 "/**
  * @license
  *
@@ -191,9 +191,9 @@ exports[`Plugin fixtures splitChunks: minimal 1`] = `
  */"
 `;
 
-exports[`Plugin fixtures splitChunks: minimal 2`] = `""`;
+exports[`Plugin > fixtures > splitChunks: minimal 2`] = `""`;
 
-exports[`Plugin fixtures splitChunks: multi-versions 1`] = `
+exports[`Plugin > fixtures > splitChunks: multi-versions 1`] = `
 "/**
  * @license
  *
@@ -205,7 +205,7 @@ exports[`Plugin fixtures splitChunks: multi-versions 1`] = `
  */"
 `;
 
-exports[`Plugin fixtures splitChunks: multi-versions 2`] = `
+exports[`Plugin > fixtures > splitChunks: multi-versions 2`] = `
 "/**
  * @license
  *
@@ -241,6 +241,6 @@ exports[`Plugin fixtures splitChunks: multi-versions 2`] = `
  */"
 `;
 
-exports[`Plugin fixtures splitChunks: private 1`] = `""`;
+exports[`Plugin > fixtures > splitChunks: private 1`] = `""`;
 
-exports[`Plugin fixtures splitChunks: private 2`] = `""`;
+exports[`Plugin > fixtures > splitChunks: private 2`] = `""`;
