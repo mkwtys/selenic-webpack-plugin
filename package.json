@@ -63,7 +63,7 @@
     "@types/webpack-sources": "3.2.3",
     "@vitest/coverage-v8": "1.6.0",
     "memory-fs": "0.5.0",
-    "rimraf": "5.0.8",
+    "rimraf": "5.0.9",
     "terser-webpack-plugin": "3.1.0",
     "typescript": "5.5.3",
     "vitest": "1.6.0",
