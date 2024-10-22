@@ -54,7 +54,7 @@
   "devDependencies": {
     "@babel/cli": "7.25.9",
     "@babel/preset-env": "7.25.9",
-    "@babel/preset-typescript": "7.24.7",
+    "@babel/preset-typescript": "7.25.9",
     "@types/memory-fs": "0.3.7",
     "@types/node": "20.16.14",
     "@types/pkg-up": "3.1.0",
